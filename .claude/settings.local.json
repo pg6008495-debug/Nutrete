@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"C:/Users/User/Downloads\" 2>/dev/null | head -40; echo \"---DESKTOP---\"; ls -la \"C:/Users/User/Desktop\" 2>/dev/null | head -40)",
+      "Bash(ffmpeg -version)"
+    ]
+  }
+}
