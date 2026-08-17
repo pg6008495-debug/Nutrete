@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nutrete — Viandas naturales sin gluten para empresas</title>
+<meta name="description" content="Nutrete elabora viandas frescas, naturales y 100% sin gluten. Servicio de almuerzo corporativo con menú semanal: tus empleados eligen su plato una semana antes.">
+<meta name="theme-color" content="#0E1A14">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nutrete — Viandas naturales sin gluten para empresas">
+<meta property="og:description" content="Menú semanal, elección anticipada por empleado y entrega en tu oficina. Comida real, sin gluten, elaborada cada día.">
+<meta property="og:image" content="assets/img/ensaladas.jpg">
+
+<link rel="icon" href="assets/img/logo-badge.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Ir al contenido</a>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#hero" aria-label="Nutrete, inicio">
+      <span class="brand__mark"></span>
+      <span class="brand__text">
+        <strong>NUTRETE</strong>
+        <small>productos naturales</small>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#empresas">Para empresas</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#menu">Menú semanal</a>
+      <a href="#cocina">La cocina</a>
+      <a href="#planes">Planes</a>
+    </nav>
+
+    <div class="nav__cta">
+      <a class="btn btn--ghost" href="#contacto">Solicitar propuesta</a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <a href="#empresas">Para empresas</a>
+  <a href="#como">Cómo funciona</a>
+  <a href="#menu">Menú semanal</a>
+  <a href="#cocina">La cocina</a>
+  <a href="#planes">Planes</a>
+  <a href="#faq">Preguntas</a>
+  <a class="btn btn--solid" href="#contacto">Solicitar propuesta</a>
+</div>
+
+<main id="main">
+
+<!-- ══════════ HERO CINEMATOGRÁFICO ══════════ -->
+<section class="hero" id="hero">
+
+  <div class="film" aria-hidden="true">
+    <div class="film__stage" id="filmStage">
+      <div class="film__shot is-active"></div>
+      <div class="film__shot"></div>
+      <div class="film__shot"></div>
+      <div class="film__shot"></div>
+      <div class="film__shot"></div>
+      <div class="film__shot"></div>
+    </div>
+    <canvas class="film__dust" id="dust"></canvas>
+    <div class="film__grade"></div>
+    <div class="film__sweep"></div>
+    <div class="film__vignette"></div>
+    <div class="film__grain"></div>
+    <div class="film__bars"></div>
+  </div>
+
+  <div class="hero__inner">
+    <p class="hero__eyebrow"><span class="dot"></span> Montevideo · elaboración diaria · 100% sin gluten</p>
+
+    <h1 class="hero__title">
+      <span class="ln"><span>Comida real,</span></span>
+      <span class="ln"><span>en la oficina.</span></span>
+    </h1>
+
+    <p class="hero__lead">
+      Viandas naturales, sin gluten y sin conservantes. Cada viernes enviamos el menú
+      de la semana siguiente y <strong>cada empleado elige su plato</strong>. Nosotros cocinamos y entregamos.
+    </p>
+
+    <div class="hero__actions">
+      <a class="btn btn--solid" href="#contacto">Quiero una propuesta</a>
+      <a class="btn btn--line" href="#menu">Ver el menú de la semana</a>
+    </div>
+
+    <ul class="hero__facts">
+      <li><b>Sin gluten</b><span>Cocina 100% libre</span></li>
+      <li><b>Menú semanal</b><span>Elección anticipada</span></li>
+      <li><b>Entrega</b><span>En tu oficina</span></li>
+    </ul>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true"><span></span>scroll</div>
+</section>
+
+<!-- ══════════ MARQUEE ══════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Sin gluten</span><i>✳</i><span>Sin conservantes</span><i>✳</i><span>Vegetales de estación</span><i>✳</i>
+    <span>Elaborado cada día</span><i>✳</i><span>Porciones balanceadas</span><i>✳</i><span>Opciones veggie</span><i>✳</i>
+    <span>Sin gluten</span><i>✳</i><span>Sin conservantes</span><i>✳</i><span>Vegetales de estación</span><i>✳</i>
+    <span>Elaborado cada día</span><i>✳</i><span>Porciones balanceadas</span><i>✳</i><span>Opciones veggie</span><i>✳</i>
+  </div>
+</div>
+
+<!-- ══════════ PARA EMPRESAS ══════════ -->
+<section class="sec sec--empresas" id="empresas">
+  <div class="wrap">
+    <header class="sec__head reveal">
+      <p class="kicker">01 — Para empresas</p>
+      <h2 class="h2">El almuerzo de tu equipo,<br>resuelto para toda la semana.</h2>
+      <p class="sec__lead">
+        No es un catering ni un delivery más. Es una agenda semanal cerrada: menú publicado,
+        elección por persona y entrega puntual. Cero improvisación para tu equipo, cero desperdicio para nosotros.
+      </p>
+    </header>
+
+    <div class="grid3">
+      <article class="card reveal">
+        <span class="card__num">01</span>
+        <h3>Cada uno come lo que eligió</h3>
+        <p>Nada de “lo que vino hoy”. Cada empleado arma su semana con anticipación y recibe exactamente su plato, con su nombre.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__num">02</span>
+        <h3>Apto celíacos, de verdad</h3>
+        <p>Elaboramos en cocina 100% libre de gluten. No es “opción sin TACC”: es todo el menú, sin riesgo de contaminación cruzada.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__num">03</span>
+        <h3>Una sola factura</h3>
+        <p>La empresa recibe un único cierre semanal o mensual. Podés cubrir el 100%, un porcentaje o simplemente ofrecer el servicio.</p>
+      </article>
+    </div>
+
+    <div class="split reveal">
+      <div class="split__media">
+        <img src="assets/img/ensaladas.jpg" alt="Bowls de ensalada con vegetales de estación, pollo y huevo" loading="lazy">
+        <div class="split__tag">Bowls de estación</div>
+      </div>
+      <div class="split__body">
+        <p class="kicker">El problema</p>
+        <h3 class="h3">El mediodía se come la tarde.</h3>
+        <p>Salir a buscar algo, esperar el delivery, terminar con una pizza en el escritorio. Se pierde tiempo, se gasta de más y a las tres de la tarde no rinde nadie.</p>
+        <p class="kicker" style="margin-top:2.2rem">Lo que proponemos</p>
+        <h3 class="h3">Que el almuerzo ya esté decidido.</h3>
+        <p>El lunes a las 12:30 la vianda está en la oficina, fría o lista para calentar, con el nombre de cada persona. Sin decisiones, sin filas, sin sorpresas.</p>
+        <a class="link-arrow" href="#como">Ver cómo funciona</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CÓMO FUNCIONA ══════════ -->
+<section class="sec sec--dark" id="como">
+  <div class="wrap">
+    <header class="sec__head reveal">
+      <p class="kicker">02 — Cómo funciona</p>
+      <h2 class="h2">Cuatro pasos.<br>Una vez por semana.</h2>
+    </header>
+
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step__day">Viernes</span>
+        <h3>Publicamos el menú</h3>
+        <p>Enviamos el menú de la semana siguiente a RR.HH. y un link para el equipo. Cinco días, tres opciones por día.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__day">Vie — Dom</span>
+        <h3>Cada uno elige</h3>
+        <p>Los empleados entran, marcan su plato para cada día y listo. Dos minutos, desde el celular.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__day">Domingo 20:00</span>
+        <h3>Cierre y compras</h3>
+        <p>Se cierra la agenda semanal. Compramos exacto: lo que se eligió, nada más. Por eso el producto llega fresco.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__day">Lun — Vie</span>
+        <h3>Entregamos</h3>
+        <p>Vianda etiquetada con nombre, en el horario que definan. Retiramos los envases del día anterior.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════ MENÚ SEMANAL (DEMO INTERACTIVA) ══════════ -->
+<section class="sec sec--menu" id="menu">
+  <div class="wrap">
+    <header class="sec__head reveal">
+      <p class="kicker">03 — Menú semanal</p>
+      <h2 class="h2">Así lo ve tu equipo.</h2>
+      <p class="sec__lead">Probalo vos mismo: elegí un plato para cada día y mirá cómo queda armada la agenda. Es exactamente la experiencia que tendrían tus empleados.</p>
+    </header>
+
+    <div class="menu reveal">
+      <div class="menu__top">
+        <div>
+          <p class="kicker kicker--sm">Semana del</p>
+          <p class="menu__week" id="weekLabel">—</p>
+        </div>
+        <div class="menu__progress">
+          <span id="progressText">0 de 5 días elegidos</span>
+          <div class="bar"><i id="progressBar"></i></div>
+        </div>
+      </div>
+
+      <div class="menu__days" id="menuDays" role="tablist" aria-label="Días de la semana"></div>
+      <div class="menu__panel" id="menuPanel"></div>
+
+      <div class="menu__foot">
+        <div class="menu__summary" id="menuSummary"></div>
+        <button class="btn btn--solid" id="confirmBtn" disabled>Confirmar mi semana</button>
+      </div>
+      <p class="menu__note">Demo de demostración. En el servicio real cada empleado entra con su usuario y el pedido queda asociado a su nombre.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ LA COCINA ══════════ -->
+<section class="sec sec--cocina" id="cocina">
+  <div class="wrap">
+    <header class="sec__head reveal">
+      <p class="kicker">04 — La cocina</p>
+      <h2 class="h2">Todo esto,<br>sin una sola harina de trigo.</h2>
+      <p class="sec__lead">Salado, dulce y bebida. Todo elaborado por nosotros, en el día, con vegetales de estación.</p>
+    </header>
+
+    <div class="gallery">
+      <figure class="g g--hero reveal">
+        <img src="assets/img/ensaladas.jpg" alt="Bowls de ensaladas variadas con proteína y vinagreta" loading="lazy">
+        <figcaption><b>Ensaladas variadas</b><span>Vegetales de estación, 1 proteína a elección y dip de vinagreta.</span></figcaption>
+      </figure>
+      <figure class="g reveal">
+        <img src="assets/img/empanadas.jpg" alt="Empanadas de carne vacuna con masa de cúrcuma" loading="lazy">
+        <figcaption><b>Empanadas de carne</b><span>Masa de cúrcuma, sin gluten.</span></figcaption>
+      </figure>
+      <figure class="g reveal">
+        <img src="assets/img/tartas.jpg" alt="Tartas y quiches individuales recién horneadas" loading="lazy">
+        <figcaption><b>Tartas y quiches</b><span>Verdura, ricota, choclo, zapallito.</span></figcaption>
+      </figure>
+      <figure class="g reveal">
+        <img src="assets/img/muffins.jpg" alt="Muffins salados horneados en moldes individuales" loading="lazy">
+        <figcaption><b>Muffins salados</b><span>Para media mañana o coffee break.</span></figcaption>
+      </figure>
+      <figure class="g reveal">
+        <img src="assets/img/jugos.jpg" alt="Botellas de jugos y licuados naturales de 500 ml" loading="lazy">
+        <figcaption><b>Jugos y licuados</b><span>500 ml, naturales, sin azúcar agregada.</span></figcaption>
+      </figure>
+      <figure class="g reveal">
+        <img src="assets/img/milanesa.jpg" alt="Milanesa de lentejas servida en plato con hojas verdes" loading="lazy">
+        <figcaption><b>Milanesas de legumbres</b><span>Opción veggie con alto aporte proteico.</span></figcaption>
+      </figure>
+      <figure class="g reveal">
+        <img src="assets/img/postres.jpg" alt="Postres individuales en vaso con tapa" loading="lazy">
+        <figcaption><b>Postres en vaso</b><span>Chocolate, dulce de leche, durazno, frutilla.</span></figcaption>
+      </figure>
+      <figure class="g reveal">
+        <img src="assets/img/frolitas.jpg" alt="Frolitas individuales de dulce de leche y membrillo" loading="lazy">
+        <figcaption><b>Frolitas individuales</b><span>Dulce de leche y membrillo.</span></figcaption>
+      </figure>
+      <figure class="g reveal">
+        <img src="assets/img/tortita.jpg" alt="Tortita de ricota con pasas de uva espolvoreada con azúcar impalpable" loading="lazy">
+        <figcaption><b>Tortita de ricota</b><span>Con pasas de uva.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PLANES ══════════ -->
+<section class="sec sec--dark" id="planes">
+  <div class="wrap">
+    <header class="sec__head reveal">
+      <p class="kicker">05 — Planes</p>
+      <h2 class="h2">Empezá con lo que necesites.</h2>
+      <p class="sec__lead">Armamos la propuesta según la cantidad de empleados y los días. Sin permanencia mínima los primeros dos meses.</p>
+    </header>
+
+    <div class="grid3 plans">
+      <article class="plan reveal">
+        <h3>Flex</h3>
+        <p class="plan__days">3 días por semana</p>
+        <p class="plan__desc">Ideal para arrancar y medir la adopción del equipo. Días fijos a elección (ej. lunes, miércoles y viernes).</p>
+        <ul>
+          <li>Plato principal + guarnición</li>
+          <li>3 opciones por día</li>
+          <li>Etiquetado con nombre</li>
+          <li>Cierre semanal</li>
+        </ul>
+        <a class="btn btn--line" href="#contacto">Pedir cotización</a>
+      </article>
+
+      <article class="plan plan--feat reveal">
+        <span class="plan__badge">El más elegido</span>
+        <h3>Full</h3>
+        <p class="plan__days">5 días por semana</p>
+        <p class="plan__desc">La semana completa resuelta. Incluye bebida natural y postre individual todos los días.</p>
+        <ul>
+          <li>Plato principal + guarnición</li>
+          <li>3 opciones por día + opción veggie</li>
+          <li>Jugo natural 500 ml</li>
+          <li>Postre individual</li>
+          <li>Retiro de envases</li>
+        </ul>
+        <a class="btn btn--solid" href="#contacto">Pedir cotización</a>
+      </article>
+
+      <article class="plan reveal">
+        <h3>Eventos</h3>
+        <p class="plan__days">A medida</p>
+        <p class="plan__desc">Coffee breaks, reuniones de directorio, capacitaciones y cierres de año. Salado y dulce, todo sin gluten.</p>
+        <ul>
+          <li>Finger food y bocados</li>
+          <li>Mesa dulce</li>
+          <li>Jugos y licuados</li>
+          <li>Montaje incluido</li>
+        </ul>
+        <a class="btn btn--line" href="#contacto">Pedir cotización</a>
+      </article>
+    </div>
+
+    <p class="plans__note reveal">Los precios se definen por volumen y frecuencia. Escribinos y te enviamos una propuesta en 48 h.</p>
+  </div>
+</section>
+
+<!-- ══════════ NOSOTROS ══════════ -->
+<section class="sec sec--about">
+  <div class="wrap split split--rev">
+    <div class="split__media reveal">
+      <img src="assets/img/tortita.jpg" alt="Tortita de ricota con pasas de uva sobre un paño de lino, con lavanda y cuchara de cobre" loading="lazy">
+    </div>
+    <div class="split__body reveal">
+      <p class="kicker">06 — Nosotros</p>
+      <h2 class="h3 h3--big">Empezamos cocinando de a un pedido. Hoy queremos cocinarle a tu equipo.</h2>
+      <p>Nutrete nació de una necesidad concreta: comer rico sin gluten, todos los días, sin resignar variedad. Empezamos por encargue, plato a plato, escuchando a cada cliente.</p>
+      <p>Ese origen sigue marcando cómo trabajamos: cocina propia, elaboración diaria y una lista de compras que se arma con lo que la gente realmente eligió. Ahora lo llevamos a las empresas de la zona, que es donde más falta hace.</p>
+      <ul class="about__pills">
+        <li>Cocina 100% libre de gluten</li>
+        <li>Sin conservantes</li>
+        <li>Vegetales de estación</li>
+        <li>Envases con tapa, aptos microondas</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section class="sec sec--faq" id="faq">
+  <div class="wrap wrap--narrow">
+    <header class="sec__head reveal">
+      <p class="kicker">07 — Preguntas</p>
+      <h2 class="h2">Lo que suelen preguntarnos.</h2>
+    </header>
+
+    <div class="faq">
+      <details class="reveal"><summary>¿Cuántos empleados mínimo se necesitan?</summary>
+        <p>Trabajamos desde 10 viandas diarias. Por debajo de eso podemos coordinar igual, pero conviene combinarlo con otra empresa cercana para optimizar la entrega.</p></details>
+
+      <details class="reveal"><summary>¿Qué pasa si alguien falta o se enferma?</summary>
+        <p>Hasta las 20:00 del día anterior se puede dar de baja una vianda sin costo desde el mismo panel. Después de ese horario ya está comprada y elaborada.</p></details>
+
+      <details class="reveal"><summary>¿Contemplan otras restricciones además del gluten?</summary>
+        <p>Sí. Todo el menú es sin gluten por definición, y marcamos las opciones veggie, sin lácteos y sin frutos secos. Alergias puntuales se cargan en el perfil de la persona y quedan filtradas automáticamente.</p></details>
+
+      <details class="reveal"><summary>¿Cómo llegan las viandas?</summary>
+        <p>En envases con tapa aptos microondas, etiquetados con el nombre de cada persona y el contenido. Entregamos en el horario que definan y retiramos los envases del día anterior.</p></details>
+
+      <details class="reveal"><summary>¿Cómo se factura?</summary>
+        <p>Un único comprobante a la empresa, semanal o mensual. Si la empresa cubre solo una parte, enviamos el detalle por persona para el descuento por recibo.</p></details>
+
+      <details class="reveal"><summary>¿En qué zona entregan?</summary>
+        <p>Montevideo y alrededores. Contanos dónde está tu oficina y te confirmamos la logística en el mismo día.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACTO ══════════ -->
+<section class="sec sec--contacto" id="contacto">
+  <div class="wrap">
+    <div class="contact">
+      <div class="contact__left reveal">
+        <p class="kicker">08 — Contacto</p>
+        <h2 class="h2">Contanos de tu empresa.</h2>
+        <p class="sec__lead">Te enviamos una propuesta con menú de muestra y precio por vianda en 48 horas. Sin compromiso.</p>
+
+        <div class="contact__direct">
+          <a class="contact__row" href="https://wa.me/59898741984?text=Hola%20Nutrete%2C%20quiero%20informaci%C3%B3n%20del%20servicio%20para%20empresas." target="_blank" rel="noopener">
+            <span class="contact__ico">↗</span>
+            <span><b>WhatsApp</b><small>+598 98 741 984</small></span>
+          </a>
+          <a class="contact__row" href="tel:+59898741984">
+            <span class="contact__ico">☎</span>
+            <span><b>Teléfono</b><small>+598 98 741 984</small></span>
+          </a>
+          <div class="contact__row contact__row--static">
+            <span class="contact__ico">◷</span>
+            <span><b>Atención</b><small>Lunes a viernes, 8:00 – 18:00</small></span>
+          </div>
+        </div>
+      </div>
+
+      <form class="form reveal" id="form" novalidate>
+        <div class="f2">
+          <label class="field"><span>Empresa *</span><input name="empresa" required autocomplete="organization"></label>
+          <label class="field"><span>Tu nombre *</span><input name="nombre" required autocomplete="name"></label>
+        </div>
+        <div class="f2">
+          <label class="field"><span>Email *</span><input name="email" type="email" required autocomplete="email"></label>
+          <label class="field"><span>Teléfono</span><input name="tel" type="tel" autocomplete="tel"></label>
+        </div>
+        <div class="f2">
+          <label class="field"><span>Cantidad de empleados</span>
+            <select name="empleados">
+              <option>10 – 25</option><option>26 – 50</option><option>51 – 100</option><option>Más de 100</option>
+            </select></label>
+          <label class="field"><span>Días por semana</span>
+            <select name="dias"><option>3 días</option><option>5 días</option><option>A definir</option></select></label>
+        </div>
+        <label class="field"><span>Contanos un poco más</span><textarea name="mensaje" rows="4" placeholder="Zona de la oficina, horario de almuerzo, restricciones alimentarias del equipo…"></textarea></label>
+
+        <button class="btn btn--solid btn--full" type="submit">Enviar por WhatsApp</button>
+        <p class="form__hint">Se abre WhatsApp con el mensaje ya redactado. También podés escribirnos directo.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <img src="assets/img/logo-badge.svg" alt="Nutrete" width="96" height="96">
+        <p>Elaboración de alimentos naturales, sin gluten.<br>Montevideo, Uruguay.</p>
+      </div>
+      <nav class="foot__nav" aria-label="Pie de página">
+        <div><h4>Servicio</h4>
+          <a href="#empresas">Para empresas</a><a href="#como">Cómo funciona</a><a href="#planes">Planes</a><a href="#menu">Menú semanal</a></div>
+        <div><h4>Productos</h4>
+          <a href="#cocina">Viandas</a><a href="#cocina">Tartas y empanadas</a><a href="#cocina">Postres</a><a href="#cocina">Jugos y licuados</a></div>
+        <div><h4>Contacto</h4>
+          <a href="https://wa.me/59898741984" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+59898741984">+598 98 741 984</a><a href="#contacto">Pedir propuesta</a><a href="#faq">Preguntas</a></div>
+      </nav>
+    </div>
+    <div class="foot__bottom">
+      <span>© <span id="year">2026</span> Nutrete — Productos Naturales</span>
+      <span>Sin gluten · Sin conservantes · Hecho cada día</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/59898741984?text=Hola%20Nutrete%2C%20quiero%20informaci%C3%B3n%20del%20servicio%20para%20empresas." target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.22-8.24 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.02s.87 2.34.99 2.51c.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+</a>
+
+<script src="assets/js/contenido.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
