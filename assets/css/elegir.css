@@ -1,0 +1,211 @@
+/* ═══════════════════════════════════════════
+   NUTRETE — Portal "Elegí tu semana"
+   Usa los tokens de style.css
+   ═══════════════════════════════════════════ */
+
+.portal{
+  background:var(--paper);
+  min-height:100vh;
+  display:flex; flex-direction:column;
+}
+
+/* ─── Barra superior ─────────────────────── */
+.pnav{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  padding:1.05rem var(--pad);
+  border-bottom:1px solid var(--line);
+  background:var(--paper);
+  position:sticky; top:0; z-index:20;
+}
+.pnav .brand__mark{
+  width:38px; height:38px; border-radius:50%;
+  background:var(--sage) url('../img/logo-badge.svg') center/cover no-repeat;
+  flex:none;
+}
+.pnav .brand{ display:flex; align-items:center; gap:.7rem; }
+.pnav .brand__text{ display:flex; flex-direction:column; line-height:1.1; }
+.pnav .brand__text strong{ font-size:.98rem; letter-spacing:.13em; font-weight:600; }
+.pnav .brand__text small{ font-size:.6rem; letter-spacing:.17em; text-transform:uppercase; color:var(--sage); }
+.pnav__tag{
+  margin:0; font-size:.7rem; letter-spacing:.15em; text-transform:uppercase;
+  color:var(--sage); text-align:right;
+}
+
+/* ─── Contenedor ─────────────────────────── */
+.pmain{
+  flex:1;
+  width:100%; max-width:940px; margin-inline:auto;
+  padding:clamp(2rem,6vw,4rem) var(--pad) clamp(3rem,8vw,5rem);
+}
+
+.paso{ display:none; }
+.paso.is-on{ display:block; animation:pin .5s var(--ease) both; }
+@keyframes pin{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:none; } }
+
+.ptitle{ font-size:clamp(1.8rem,1.2rem + 2.4vw,3rem); margin-bottom:.7rem; }
+.plead{ color:rgba(29,55,44,.72); margin:0 0 2rem; max-width:56ch; }
+.pnote{ font-size:.82rem; color:var(--sage); margin:1.4rem 0 0; }
+
+/* ─── Tarjetas ───────────────────────────── */
+.pcard{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:clamp(1.6rem,4vw,2.8rem);
+}
+.pcard--acceso{ max-width:640px; }
+.pcard--ok{ max-width:600px; text-align:center; }
+.pcard--ok .plead{ margin-inline:auto; }
+
+/* ─── Formulario ─────────────────────────── */
+.field{ display:block; margin-bottom:1.1rem; }
+.field > span{
+  display:block; font-size:.74rem; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--sage); margin-bottom:.45rem; font-weight:500;
+}
+.field input{
+  width:100%; padding:.85rem 1rem;
+  border:1px solid var(--line); border-radius:12px;
+  background:var(--paper); color:var(--forest);
+  transition:border-color .2s, box-shadow .2s;
+}
+.field input:focus{
+  outline:none; border-color:var(--sage);
+  box-shadow:0 0 0 3px rgba(149,162,132,.22);
+}
+#inCodigo{ text-transform:uppercase; letter-spacing:.08em; font-weight:500; }
+.f2{ display:grid; grid-template-columns:1fr 1fr; gap:0 1rem; }
+@media (max-width:620px){ .f2{ grid-template-columns:1fr; } }
+
+.perror{
+  margin:0 0 1rem; padding:.75rem 1rem;
+  background:rgba(176,58,46,.08); border:1px solid rgba(176,58,46,.25);
+  border-radius:10px; color:#8E2B21; font-size:.9rem;
+}
+
+.btn--full{ width:100%; justify-content:center; }
+.btn[disabled]{ opacity:.42; cursor:not-allowed; }
+
+/* ─── Cabecera del paso 2 ────────────────── */
+.phead{
+  display:flex; align-items:flex-end; justify-content:space-between;
+  gap:2rem; flex-wrap:wrap; margin-bottom:2.4rem;
+}
+.pprog{ flex:none; min-width:190px; }
+.pprog > span{
+  display:block; font-size:.76rem; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--sage); margin-bottom:.5rem;
+}
+.pprog .bar{ height:5px; background:var(--paper-2); border-radius:99px; overflow:hidden; }
+.pprog .bar i{
+  display:block; height:100%; width:0%;
+  background:var(--lime); border-radius:99px;
+  transition:width .45s var(--ease);
+}
+
+/* ─── Días ───────────────────────────────── */
+.dias{ display:flex; flex-direction:column; gap:1.4rem; }
+
+.dia{
+  background:#fff; border:1px solid var(--line);
+  border-radius:18px; padding:1.4rem clamp(1.1rem,3vw,1.8rem);
+  transition:border-color .25s;
+}
+.dia.is-done{ border-color:var(--sage); }
+
+.dia__head{
+  display:flex; align-items:baseline; gap:.8rem;
+  margin-bottom:1.1rem; padding-bottom:.9rem;
+  border-bottom:1px solid var(--line);
+}
+.dia__nom{
+  font-family:var(--f-display); font-size:1.3rem; font-weight:500;
+  letter-spacing:-.01em; margin:0;
+}
+.dia__fecha{ font-size:.8rem; color:var(--sage); }
+.dia__ok{
+  margin-left:auto; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--sage); opacity:0; transition:opacity .25s;
+}
+.dia.is-done .dia__ok{ opacity:1; }
+
+.opciones{ display:grid; grid-template-columns:repeat(3,1fr); gap:.85rem; }
+@media (max-width:760px){ .opciones{ grid-template-columns:1fr; } }
+
+.opt{
+  position:relative;
+  display:flex; flex-direction:column; gap:.4rem;
+  text-align:left; width:100%;
+  padding:1rem 1.05rem;
+  background:var(--paper); color:var(--forest);
+  border:1px solid var(--line); border-radius:13px;
+  cursor:pointer;
+  transition:border-color .2s, background .2s, transform .2s var(--ease);
+}
+.opt:hover{ border-color:var(--sage); transform:translateY(-2px); }
+.opt:focus-visible{ outline:2px solid var(--sage); outline-offset:2px; }
+.opt[aria-pressed="true"]{
+  background:var(--lime); border-color:var(--lime);
+  color:var(--ink);
+}
+.opt__tipo{
+  font-size:.65rem; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--sage); font-weight:600;
+}
+.opt[aria-pressed="true"] .opt__tipo{ color:rgba(11,22,16,.6); }
+.opt__nom{ font-weight:500; line-height:1.32; font-size:.96rem; }
+.opt__det{ font-size:.8rem; line-height:1.45; color:rgba(29,55,44,.66); }
+.opt[aria-pressed="true"] .opt__det{ color:rgba(11,22,16,.7); }
+.opt__tags{ display:flex; flex-wrap:wrap; gap:.3rem; margin-top:.2rem; }
+.opt__tags span{
+  font-size:.66rem; letter-spacing:.04em;
+  padding:.2rem .5rem; border-radius:99px;
+  background:rgba(149,162,132,.18); color:var(--forest);
+}
+.opt[aria-pressed="true"] .opt__tags span{ background:rgba(11,22,16,.13); color:var(--ink); }
+
+/* ─── Pie del paso 2 ─────────────────────── */
+.pfoot{
+  margin-top:2.4rem; padding-top:2rem;
+  border-top:1px solid var(--line);
+  max-width:520px; margin-inline:auto; text-align:center;
+}
+.pfoot .pnote{ margin-top:.9rem; }
+
+/* ─── Confirmación ───────────────────────── */
+.tick{
+  width:62px; height:62px; margin:0 auto 1.4rem;
+  display:grid; place-items:center;
+  border-radius:50%; background:var(--lime); color:var(--ink);
+  font-size:1.8rem; line-height:1;
+}
+.resumen{ list-style:none; margin:0 0 2rem; padding:0; text-align:left; }
+.resumen li{
+  display:flex; gap:1rem; align-items:baseline;
+  padding:.8rem 0; border-bottom:1px solid var(--line);
+}
+.resumen li:last-child{ border-bottom:0; }
+.resumen b{
+  flex:none; width:92px;
+  font-size:.72rem; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--sage); font-weight:500;
+}
+.resumen span{ font-size:.95rem; line-height:1.4; }
+
+/* ─── Pie ────────────────────────────────── */
+.pfooter{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem; flex-wrap:wrap;
+  padding:1.4rem var(--pad);
+  border-top:1px solid var(--line);
+  font-size:.82rem; color:var(--sage);
+}
+.pfooter a{ text-decoration:underline; text-underline-offset:3px; }
+
+/* ─── Cargando ───────────────────────────── */
+.is-busy{ position:relative; pointer-events:none; opacity:.6; }
+
+@media (prefers-reduced-motion:reduce){
+  .paso.is-on{ animation:none; }
+  .opt, .opt:hover{ transition:none; transform:none; }
+}

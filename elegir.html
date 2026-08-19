@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elegí tu semana — Nutrete</title>
+<meta name="description" content="Portal para que cada empleado elija su vianda de la semana.">
+<meta name="theme-color" content="#0E1A14">
+<meta name="robots" content="noindex">
+
+<link rel="icon" href="assets/img/logo-badge.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/elegir.css">
+</head>
+<body class="portal">
+
+<header class="pnav">
+  <a class="brand" href="index.html" aria-label="Nutrete, inicio">
+    <span class="brand__mark"></span>
+    <span class="brand__text"><strong>NUTRETE</strong><small>productos naturales</small></span>
+  </a>
+  <p class="pnav__tag" id="navTag">Menú de la semana</p>
+</header>
+
+<main class="pmain">
+
+  <!-- ═══ PASO 1 — ACCESO ═══ -->
+  <section class="paso is-on" id="pasoAcceso">
+    <div class="pcard pcard--acceso">
+      <p class="kicker">Paso 1 de 2</p>
+      <h1 class="h2 ptitle">Entrá con el código de tu empresa.</h1>
+      <p class="plead">Te lo pasa RR.HH. Lo usás una sola vez por semana para elegir tus viandas.</p>
+
+      <form id="formAcceso" novalidate>
+        <label class="field">
+          <span>Código de empresa</span>
+          <input id="inCodigo" name="codigo" required autocomplete="off"
+                 autocapitalize="characters" spellcheck="false" placeholder="Ej: DEMO2026">
+        </label>
+        <div class="f2">
+          <label class="field">
+            <span>Tu nombre y apellido</span>
+            <input id="inNombre" name="nombre" required autocomplete="name" placeholder="Ana Pérez">
+          </label>
+          <label class="field">
+            <span>Tu email</span>
+            <input id="inEmail" name="email" type="email" required autocomplete="email" placeholder="ana@empresa.com">
+          </label>
+        </div>
+
+        <p class="perror" id="errAcceso" hidden></p>
+        <button class="btn btn--solid btn--full" type="submit" id="btnAcceso">Continuar</button>
+      </form>
+
+      <p class="pnote">Tus datos se usan solo para etiquetar tu vianda. No se comparten con nadie más.</p>
+    </div>
+  </section>
+
+  <!-- ═══ PASO 2 — MENÚ ═══ -->
+  <section class="paso" id="pasoMenu">
+    <header class="phead">
+      <div>
+        <p class="kicker">Paso 2 de 2 · <span id="labelEmpresa">—</span></p>
+        <h1 class="h2 ptitle">Elegí un plato para cada día.</h1>
+        <p class="plead">Semana del <b id="labelSemana">—</b>. Podés cambiar tu elección hasta el domingo a las 20:00.</p>
+      </div>
+      <div class="pprog">
+        <span id="progTxt">0 de 5 días</span>
+        <div class="bar"><i id="progBar"></i></div>
+      </div>
+    </header>
+
+    <div class="dias" id="dias"></div>
+
+    <div class="pfoot">
+      <p class="perror" id="errMenu" hidden></p>
+      <button class="btn btn--solid btn--full" id="btnGuardar" disabled>Confirmar mi semana</button>
+      <p class="pnote">Si dejás algún día sin elegir, ese día no se te entrega vianda.</p>
+    </div>
+  </section>
+
+  <!-- ═══ PASO 3 — LISTO ═══ -->
+  <section class="paso" id="pasoListo">
+    <div class="pcard pcard--ok">
+      <div class="tick" aria-hidden="true">✓</div>
+      <h1 class="h2 ptitle">Listo, <span id="okNombre">—</span>.</h1>
+      <p class="plead">Tu semana quedó registrada. Te esperamos con tu vianda.</p>
+      <ul class="resumen" id="okResumen"></ul>
+      <button class="btn btn--line btn--full" id="btnVolver">Cambiar mi elección</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pfooter">
+  <span>© <span id="year">2026</span> Nutrete — Productos Naturales</span>
+  <a href="https://wa.me/59898741984" target="_blank" rel="noopener">¿Algún problema? Escribinos</a>
+</footer>
+
+<script src="assets/js/contenido.js"></script>
+<script src="assets/js/elegir.js"></script>
+</body>
+</html>
