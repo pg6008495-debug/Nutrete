@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel — Nutrete</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0E1A14">
+
+<link rel="icon" href="assets/img/logo-badge.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/elegir.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="portal admin">
+
+<header class="pnav">
+  <a class="brand" href="index.html" aria-label="Nutrete, inicio">
+    <span class="brand__mark"></span>
+    <span class="brand__text"><strong>NUTRETE</strong><small>panel interno</small></span>
+  </a>
+  <div class="anav__right">
+    <span class="anav__user" id="navUser" hidden></span>
+    <button class="btn btn--line btn--xs" id="btnSalir" hidden>Salir</button>
+  </div>
+</header>
+
+<main class="pmain amain">
+
+  <!-- ═══ LOGIN ═══ -->
+  <section class="paso is-on" id="vLogin">
+    <div class="pcard pcard--acceso">
+      <p class="kicker">Acceso interno</p>
+      <h1 class="h2 ptitle">Panel de Nutrete.</h1>
+      <p class="plead">Entrá con tu cuenta de administrador para ver los pedidos de la semana.</p>
+
+      <form id="formLogin" novalidate>
+        <label class="field">
+          <span>Email</span>
+          <input id="inEmail" type="email" required autocomplete="username">
+        </label>
+        <label class="field">
+          <span>Contraseña</span>
+          <input id="inPass" type="password" required autocomplete="current-password">
+        </label>
+        <p class="perror" id="errLogin" hidden></p>
+        <button class="btn btn--solid btn--full" type="submit" id="btnLogin">Entrar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══ PANEL ═══ -->
+  <section class="paso" id="vPanel">
+
+    <div class="atabs" role="tablist">
+      <button class="atab is-on" data-vista="pedidos" role="tab">Pedidos</button>
+      <button class="atab" data-vista="cocina" role="tab">Qué cocinar</button>
+      <button class="atab" data-vista="empresas" role="tab">Empresas</button>
+    </div>
+
+    <!-- ─── Selector de semana ─── -->
+    <div class="asemana">
+      <button class="wnav" id="semAnt" aria-label="Semana anterior">‹</button>
+      <div class="asemana__txt">
+        <span class="kicker kicker--sm">Semana del</span>
+        <b id="semLabel">—</b>
+      </div>
+      <button class="wnav" id="semSig" aria-label="Semana siguiente">›</button>
+      <button class="btn btn--line btn--xs" id="semHoy">La que viene</button>
+    </div>
+
+    <p class="perror" id="errPanel" hidden></p>
+
+    <!-- ─── Vista: Pedidos ─── -->
+    <div class="avista is-on" id="vwPedidos">
+      <div class="astats" id="stats"></div>
+      <div id="listaPedidos"></div>
+    </div>
+
+    <!-- ─── Vista: Qué cocinar ─── -->
+    <div class="avista" id="vwCocina">
+      <div id="listaCocina"></div>
+    </div>
+
+    <!-- ─── Vista: Empresas ─── -->
+    <div class="avista" id="vwEmpresas">
+      <div class="acard acard--form">
+        <h2 class="h3">Dar de alta una empresa</h2>
+        <form id="formEmpresa" novalidate>
+          <div class="f3">
+            <label class="field">
+              <span>Nombre</span>
+              <input id="emNombre" required placeholder="Estudio Rivas">
+            </label>
+            <label class="field">
+              <span>Código para el equipo</span>
+              <input id="emCodigo" required placeholder="RIVAS2026" autocapitalize="characters">
+            </label>
+            <label class="field">
+              <span>Email de RR.HH. (opcional)</span>
+              <input id="emEmail" type="email" placeholder="rrhh@rivas.com">
+            </label>
+          </div>
+          <p class="perror" id="errEmpresa" hidden></p>
+          <p class="aok" id="okEmpresa" hidden></p>
+          <button class="btn btn--solid" type="submit" id="btnCrear">Crear empresa</button>
+        </form>
+      </div>
+
+      <div id="listaEmpresas"></div>
+    </div>
+
+  </section>
+</main>
+
+<footer class="pfooter">
+  <span>Panel interno · Nutrete</span>
+  <a href="elegir.html">Ver el portal de empleados</a>
+</footer>
+
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
