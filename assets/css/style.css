@@ -612,3 +612,26 @@ a.contact__row:hover{ padding-left:.6rem; }
   .hero__lead,.hero__actions,.hero__facts{ opacity:1; }
   .film__grain,.film__sweep,.film__dust{ display:none; }
 }
+
+/* ─── Acceso al portal de empleados ──────── */
+.nav__portal{
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-size:.8rem; opacity:.72; white-space:nowrap;
+  transition:opacity .3s;
+}
+.nav__portal:hover{ opacity:1; }
+.nav__portal .dot{
+  width:6px; height:6px; border-radius:50%; flex:none;
+  background:var(--lime);
+  box-shadow:0 0 0 3px rgba(201,224,106,.18);
+}
+.menu__note a{
+  color:var(--forest); text-decoration:underline;
+  text-underline-offset:3px; text-decoration-thickness:1px;
+  text-decoration-color:var(--sage);
+}
+.menu__note a:hover{ text-decoration-color:var(--forest); }
+
+@media (max-width:1080px){
+  .nav__portal{ display:none; }
+}
